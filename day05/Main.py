@@ -4,7 +4,8 @@ Created on 10 Jan 2022
 @author: Jesper Kristiansson
 '''
 
-if __name__ == '__main__':
+
+def main():
     inp = open("input.in").read().split()
     seatIDs = list()
     for line in inp:
@@ -30,3 +31,7 @@ if __name__ == '__main__':
     for seatID in range(highestID):
         if seatID not in seatIDs and seatID - 1 in seatIDs and seatID + 1 in seatIDs:
             print("Part 2:", seatID)
+
+
+if __name__ == '__main__':
+    main()
